@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-70;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-dark;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.project-card {
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: rotateY(10deg) scale(1.1);
+}
+
+.testimonial-card {
+  opacity: 0.8;
+  transform: scale(0.85);
+}
+
+.testimonial-card.active-card {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.testimonial-card .p-8 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .testimonial-card {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+
+  #banner-container {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  .project-card img,
+  .project-card h3 {
+    pointer-events: auto;
+  }
+
+  .project-card h6,
+  .project-card p {
+    pointer-events: none;
+  }
+}
+
+.keyword {
+  display: inline-block;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff; /* Ubah warna menjadi putih */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0;
+  z-index: 50;
+}
+
+.checklist-icon {
+  margin: 1rem auto;
+  width: 114px;
+  height: 114px;
+  /* Tambahkan transform dan animasi */
+  transform-style: preserve-3d;
+  animation: rotateCoin 2s ease-in-out;
+}
+
+@keyframes rotateCoin {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(1turn);
+  }
+}
+
+.popup-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f172a; /* Ubah warna menjadi hitam */
+  margin-bottom: 0.5rem;
+}
+
+.popup-text {
+  font-size: 1rem;
+  color: #64748b; /* Ubah warna menjadi hitam */
+}
+
+/* Tambahkan transisi opacity */
+.transition-opacity {
+  transition-property: opacity;
+}
+
+/* Tambahkan durasi transisi */
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+/* Tambahkan efek muncul */
+.popup:not(.hidden) {
+  opacity: 1;
+}
+
+.input-container {
+  display: flex;
+  align-items: center; /* Menyelaraskan item secara vertikal */
+  height: 50px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"] {
+  height: 40px; /* Atur tinggi menjadi 30px */
+}
+
+.input-container .checklist-icon {
+  flex: 0 0 30px; /* Atur lebar tetap menjadi 30px */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  color: #28c745; /* Ubah warna menjadi hijau */
+}
+
+#banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 60px; /* Mengatur jarak dari atas (sesuaikan dengan tinggi navbar) */
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+#banner-bar {
+  background-color: #2978a0;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  flex: 1;
+}
+
+#close-button {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Styles for the rest of the page */
+
+header {
+  position: relative;
+  z-index: 10;
+}
+.video-wrapper {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  width: 85%;
+  margin: 0 auto;
+}
+
+.video-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+.gdrive-video {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gdrive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  object-fit: cover;
+}
