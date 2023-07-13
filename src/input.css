@@ -26,14 +26,26 @@ body {
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
 }
+/* Tambahkan styling untuk dropdown */
+.dropdown-content {
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 .project-card {
   perspective: 1000px;
   transition: transform 0.3s ease;
 }
 
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
 .project-card:hover {
-  transform: rotateY(10deg) scale(1.1);
+  background-color: rgba(0, 0, 0, 0.2); /* Ubah nilai alpha (0.2) sesuai kebutuhan */
 }
 
 .testimonial-card {
