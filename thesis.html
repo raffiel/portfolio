@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thesis Project | Rafi El Falih</title>
+    <link rel="stylesheet" href="dist/output.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  </head>
+  <body class="relative">
+    <!--Header Section Start-->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10" id="navbar">
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="/index.html" class="font-bold text-lg text-primary block py-6">Rafi El Falih</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+              <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="index.html#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
+                </li>
+                <li class="group">
+                  <a href="index.html#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About</a>
+                </li>
+                <li class="group">
+                  <a href="index.html#skills" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Skills</a>
+                </li>
+                <li class="group">
+                  <a href="index.html#projects" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Projects</a>
+                </li>
+                <li class="group">
+                  <a href="index.html#testimoni" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Testimoni</a>
+                </li>
+                <li class="group">
+                  <a href="index.html#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Header Section End-->
+    <section class="relative">
+      <img src="/dist/img/cover_porto/thesis2.jpg" alt="UP in Cafe" class="w-full h-400 object-cover object-center rounded-t-md pt-10" />
+      <div class="container px-8 mb-8">
+        <h6 class="keyword bg-primary rounded-full py-1 px-4 text-sm font-medium text-white mt-5 mb-3">Machine Learning</h6>
+        <h6 class="keyword bg-primary rounded-full py-1 px-4 text-sm font-medium text-white mt-5 mb-3">Front-End</h6>
+      </div>
+    </section>
+
+    <section id="description" class="pt-8 pb-16">
+      <div class="container">
+        <div class="flex flex-wrap mb-10">
+          <div class="w-full px-4 mb-10 lg:w-1/2">
+            <h1 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Thesis Project</h1>
+            <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
+              In this study, I conducted sentiment analysis of the 2024 Indonesian presidential candidates on the Twitter social media platform using the TF-IDF and naive Bayes methods. Twitter was chosen due to its widespread use among the
+              Indonesian population, making it a strategic platform for observing public opinions regarding the 2024 presidential candidates. The subjects of sentiment analysis were declared presidential candidates, including Prabowo
+              Subianto, Ganjar Pranowo, and Anies Baswedan.
+            </p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <p class="font-medium text-base text-secondary mt-10 mb-0 lg:text-lg">
+              The dataset of tweets used in this analysis covered the month of October 2022, collected through web crawling using the Twitter API. Subsequently, the tweet data underwent a preprocessing stage to clean out irrelevant
+              elements. Following this, the data was labeled using an Indonesian-language lexicon to determine sentiment. The final results of the analysis can be found in the concluding section of this content.
+            </p>
+            <h4 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Tools</h4>
+            <div class="grid grid-cols-4 gap-1 mt-6">
+              <div class="flex flex-col items-start text-left">
+                <img src="/dist/img/icon/python biru.png" width="40" alt="Python" />
+                <span class="mt-2 text-sm font-medium">Python</span>
+              </div>
+              <div class="flex flex-col items-start text-left">
+                <img src="/dist/img/icon/tweet.png" width="40" alt="Twitter API" />
+                <span class="mt-2 text-sm font-medium">Twitter API</span>
+              </div>
+              <div class="flex flex-col items-start text-left">
+                <svg role="img" width="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>HTML5</title><path fill="#E34F26" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+                    <path d="M12 2L2 7l3 15h14l3-15-10-5zm2 13h-4v4H9v-4H5l7-7 7 7h-4z" />
+                  </svg>
+                <span class="mt-2 text-sm font-medium">HTML</span>
+              </div>
+              <div class="flex flex-col items-start text-left">
+                <svg role="img" width="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>CSS3</title><path fill="#1572B6" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+                  <span class="mt-2 text-sm font-medium">CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Cycle" class="pt-8 pb-16">
+        <div class="container">
+            <div class="w-full px-4">
+              <div class="mx-auto text-center mb-10">
+                <!---Feeds 1:1-->
+                <h3 class="font-bold text-primary text-4xl mb-2">Program Development Cycle</h3>
+                <div class="relative mt-5 lg:mt-9 overflow-hidden">
+                    <div id="testimonialCarousel" class="swiper-container w-full lg:w-2/3 lg:mx-auto mt-5 overflow-x-hidden" >
+                      <div class="swiper-wrapper">
+                        <!-- Testimonial Card 1 -->
+                        <div class="swiper-slide testimonial-card">
+                          <div class="bg-white rounded-lg shadow-lg p-8">
+                            <img class="rounded-full w-24 mx-auto mb-4" src="/dist/img/icon/jurnal.png" alt="Client 1">
+                            <h3 class="font-bold text-lg text-primary mb-0">1. Planning</h3>
+                            <p class="font-semibold text-base text-secondary mb-4 justify-items-start">Plan the data collection from Twitter using the Twitter API, specify the presidential candidates for sentiment analysis, including Prabowo Subianto, Ganjar Pranowo, and Anies Baswedan, determine the time period for collecting tweets, which is October 2022.</p>
+                          </div>
+                        </div>
+                        
+                        <!-- Testimonial Card 2 -->
+                        <div class="swiper-slide testimonial-card">
+                            <div class="bg-white rounded-lg shadow-lg p-8">
+                              <img class="rounded-full w-24 mx-auto mb-4" src="/dist/img/icon/tweet.png" alt="Client 1">
+                              <h3 class="font-bold text-lg text-primary mb-0">2. Data Collection</h3>
+                              <p class="font-semibold text-base text-secondary mb-4 justify-items-start">Utilize the Twitter API to collect tweets from October 2022, which include the specified presidential candidates. Store the tweet data in a suitable format for further analysis</p>
+                            </div>
+                          </div>
+                        
+                        <!-- Testimonial Card 3 -->
+                        <div class="swiper-slide testimonial-card">
+                            <div class="bg-white rounded-lg shadow-lg p-8">
+                              <img class="rounded-full w-24 mx-auto mb-4" src="/dist/img/icon/cleaning.png" alt="Client 1">
+                              <h3 class="font-bold text-lg text-primary mb-0">3. Preprocessing Data</h3>
+                              <p class="font-semibold text-base text-secondary mb-4 justify-items-start">Cleanse tweet data by removing unnecessary elements such as links, special characters, and the use of slang. Normalize text to address spelling and formatting differences. Eliminate duplicate data if present</p>
+                            </div>
+                          </div>
+        
+                          <div class="swiper-slide testimonial-card">
+                            <div class="bg-white rounded-lg shadow-lg p-8">
+                              <img class="rounded-full w-24 mx-auto mb-4" src="/dist/img/icon/announce.png" alt="Client 1">
+                              <h3 class="font-bold text-lg text-primary mb-0">4. Sentiment Labeling</h3>
+                              <p class="font-semibold text-base text-secondary mb-4 justify-items-start">Utilize an Indonesian language lexicon dictionary to assign sentiment labels (positive, negative, neutral) to each tweet. Adjust parameters to determine sentiment based on TF-IDF and naive Bayes scores</p>
+                            </div>
+                          </div>
+        
+                          <div class="swiper-slide testimonial-card">
+                            <div class="bg-white rounded-lg shadow-lg p-8">
+                              <img class="rounded-full w-24 mx-auto mb-4" src="/dist/img/icon/graph.png" alt="Client 1">
+                              <h3 class="font-bold text-lg text-primary mb-0">5. Sentiment Analysis</h3>
+                              <p class="font-semibold text-base text-secondary mb-4 justify-items-start">Calculate sentiment scores for each presidential candidate based on related tweets. Create visualizations of sentiment analysis results, such as graphs or diagrams, to present findings.</p>
+                            </div>
+                          </div>
+        
+                          <div class="swiper-slide testimonial-card">
+                            <div class="bg-white rounded-lg shadow-lg p-8">
+                              <img class="rounded-full w-24 mx-auto mb-4" src="/dist/img/icon/checklist icon.png" alt="Client 1">
+                              <h3 class="font-bold text-lg text-primary mb-0">6. Evaluation and Further Processing</h3>
+                              <p class="font-semibold text-base text-secondary mb-4 justify-items-start">Review the analysis results and evaluate whether they align with the initial objectives. If necessary, carry out further processing, such as identifying specific sentiment patterns or trends.</p>
+                            </div>
+                          </div>
+                        
+                      </div>
+                      <!-- Navigation Arrows -->
+                      <div class="swiper-button-next swiper-button-white hidden lg:flex right-0"></div>
+                      <div class="swiper-button-prev swiper-button-white hidden lg:flex left-0"></div>
+                  </div>
+                  </div>
+                <!--Akhir Feeds 1:1-->
+
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section id="resources" class="pt-36 pb-20 bg-slate-800">
+        <div class="mx-auto text-center mb-16">
+            <h2 class="font-bold text-primary text-3xl mb-4 sm:text-4xl lg:text-5xl">Project Resources</h2>
+            <h4 class="font-normal  text-white text-lg mb-2">Explore project-related resources, including access to the source code, research datasets, and lexicon dictionary.</h4>
+        <!--Button Group here-->
+              <div class="mt-10 container flex flex-wrap justify-center">
+                <!-- Source Code Button -->
+                <a href="link-to-source-code" class="mt-6 mx-8 py-2 px-1 rounded-lg text-white bg-primary font-medium" style="width: 200px;">Source Code</a>
+
+                <!-- Research Dataset Button -->
+                <a href="link-to-dataset" class="mt-6 mx-8 py-2 px-1 rounded-lg text-white bg-primary font-medium" style="width: 200px;">Research Dataset</a>
+
+                <!-- Lexicon Dictionary Button -->
+                <a href="link-to-lexicon" class="mt-6 mx-8 py-2 px-1 rounded-lg text-white bg-primary font-medium" style="width: 200px;">Indonesia Lexicon Dictionary</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="slide-gallery" class="pt-24 pb-14 bg-slate-100">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto text-center mb-10">
+            <!---Feeds 1:1-->
+            <h3 class="font-bold text-primary text-4xl mb-2">Exploring Our Solution!</h3>
+            <h5 class="font-medium text-slate-500 text-lg mb-4 sm:text-4xl lg:text-lg">Dive into the Visuals of Our Crafted System</h5>
+            <div class="relative mt-5 lg:mt-9 overflow-hidden">
+              <div id="testimonialCarousel" class="swiper-container w-full lg:w-2/3 lg:mx-auto mt-5 overflow-x-hidden mb-10">
+                <div class="swiper-wrapper">
+                  <!-- Testimonial Card 1 -->
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/Landing Page 1.jpeg" alt="Main Page of the System" />
+                    <p class="mt-2 text-secondary">1. This is the Main Page of the System</p>
+                  </div>
+
+                  <!-- Testimonial Card 2 -->
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/Landing Page 2.jpeg" alt="feature for uploading datasets" />
+                    <p class="mt-2 text-secondary">2. This is the view of the feature for uploading datasets.</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/Dataset mentah.jpeg" alt="uploaded dataset" />
+                    <p class="mt-2 text-secondary">3. This is a view of the uploaded dataset</p>
+                  </div>
+
+                  <!-- Testimonial Card 3 -->
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/Dataset setelah preprocessing.jpeg" alt="dataset after undergoing cleaning process" />
+                    <p class="mt-2 text-secondary">4. This is a view of the dataset after undergoing cleaning process</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/Dataset berlabel.jpeg" alt="sentiment-labeled dataset" />
+                    <p class="mt-2 text-secondary">5. This is a view of the sentiment-labeled dataset</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/akurasi.jpeg" alt="method's accuracy and visualizes the positive sentiment outcomes" />
+                    <p class="mt-2 text-secondary">6. This display showcases the method's accuracy and visualizes the positive sentiment outcomes</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/halaman sentimen negatif.jpg" alt="negative sentiment charts" />
+                    <p class="mt-2 text-secondary">7. This is a view displaying negative sentiment charts</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/chart anies.jpg" alt="Chart about Anies" />
+                    <p class="mt-2 text-secondary">8. This is a chart displaying sentiment analysis regarding Anies Baswedan</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/tweet anies.jpeg" alt="Chart about Anies" />
+                    <p class="mt-2 text-secondary">9. This is a table displaying sentiment analysis regarding Anies Baswedan</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/chart ganjar.jpg" alt="Chart about Ganjar" />
+                    <p class="mt-2 text-secondary">10. This is a chart displaying sentiment analysis regarding Ganjar Pranowo</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/tweet ganjar.jpeg" alt="Tweet about Ganjar" />
+                    <p class="mt-2 text-secondary">11. This is a table displaying sentiment analysis regarding Ganjar Pranowo</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/chart prabowo.jpg" alt="Chart abour Prabowo" />
+                    <p class="mt-2 text-secondary">12. This is a chart displaying sentiment analysis regarding Prabowo Subianto</p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="rounded-lg max-h-16" src="/dist/img/thesis/Tweet Prabowo.jpeg" alt="Tweet about Prabowo" />
+                    <p class="mt-2 text-secondary">13. This is a chart displaying sentiment analysis regarding Prabowo Subianto</p>
+                  </div>
+
+                  <!-- Add more testimonial cards here -->
+                </div>
+                <!-- Navigation Arrows -->
+                <div class="swiper-button-next swiper-button-white hidden lg:flex right-0"></div>
+                <div class="swiper-button-prev swiper-button-white hidden lg:flex left-0"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Back Button-->
+    <section class="pb-20">
+      <div class="container">
+        <a href="index.html#projects" class="flex items-center absolute bottom-10 right-10 left-35 text-white bg-primary text-lg px-3 py-2 rounded-full shadow-lg lg:text-xl lg:bottom-16 lg:right-16">
+          <img src="/dist/img/icon/back.png" width="20" alt="Back Icon" style="filter: invert(1)" class="mr-2" />
+          <span>Back to Home</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="bg-dark pt-2 pb-12 mb-0">
+      <div class="container">
+        <div class="w-full pt-10 border-t border-slate-700">
+          <p class="font-medium text-xs text-slate-500 text-center">Created with a touch of magic ✨ by <a href="https://www.instagram.com/raffiel.jpg/" target="_blank" class="font-bold text-primary">Rafi El Falih</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/dist/js/script.js"></script>
+    <script src="/dist/js/testimonial-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  </body>
+</html>

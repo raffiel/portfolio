@@ -260,3 +260,27 @@ header {
   height: 0;
   object-fit: cover;
 }
+
+.btn-primary {
+  background-color: #007bff; /* Your primary button color */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Your primary button hover color */
+}
+
+.btn-secondary {
+  background-color: #6c757d; /* Your secondary button color */
+}
+
+.btn-secondary:hover {
+  background-color: #545b62; /* Your secondary button hover color */
+}
+
+.btn-tertiary {
+  background-color: #17a2b8; /* Your tertiary button color */
+}
+
+.btn-tertiary:hover {
+  background-color: #117a8b; /* Your tertiary button hover color */
+}
