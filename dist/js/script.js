@@ -30,6 +30,8 @@ form.addEventListener("submit", function (event) {
 
   // Setelah SweetAlert ditampilkan, reset formulir
   form.reset();
+
+  resetValidation();
 });
 
 const nameInput = document.querySelector("#name");
