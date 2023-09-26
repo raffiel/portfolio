@@ -11,8 +11,6 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    
-    
   </head>
   <body class="relative">
     
@@ -58,18 +56,20 @@
                 <li class="group">
                   <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
                 </li>
+                <!---
                 <li class="group">
                   <div class="dropdown relative">
-                    <button class="bg-gray-500 rounded-lg py-2 mx-8 flex" id="languageDropdown">
+                    <button class="bg-gray-100 rounded-lg py-2 mx-8 flex" id="languageDropdown">
                       <img src="/dist/img/icon/united-kingdom.png" alt="English" width="25">
                     </button>
-                    <div class="dropdown-content hidden absolute bg-gray-500 rounded-lg py-2 mx-8 top-10 left-0 right-0">
+                    <div class="dropdown-content hidden absolute bg-gray-100 rounded-lg py-2 mx-8 top-10 left-0 right-0">
                       <button class="language-option" data-lang="indonesia">
                         <img src="/dist/img/icon/indonesia.png" alt="Indonesia" width="25">
                       </button>
                     </div>
                   </div>                                    
-                </li>                                   
+                </li> 
+                -->                                  
               </ul>
             </nav>
           </div>
@@ -87,12 +87,14 @@
             <h1 class="text-base font-semibold text-primary md:text-xl">Hi there, everyone🥂!<span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"> I'm Raffiel</span></h1>
             <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Web Developer & UI Designer</h2>
             <p class="font-medium text-secondary mb-10 leading-relaxed">Fresh graduate in Computer Science, possessing a unique fusion of coding prowess and artistic sensibility.</p>
-            <a href="#contact" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover: shadow-lg hover:opacity-80 transition duration-300 ease-in-out"> Contact me</a>
+            <a href="#contact" > 
+              <button class="bg-blue-500 shadow-lg shadow-blue-500/50 rounded-lg text-white py-2 px-4 font-semibold">Contact me</button>
+            </a>
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:mt-9 lg:right-0">
               <img src="/dist/img/foto4.png" alt="Rafi El Falih" class="max-w-full mx-auto" />
-              <span class="absolute -bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-150">
+              <span class="absolute -bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-150 ">
                 <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fill="#2978A0"
@@ -297,9 +299,15 @@
           </div>
         </div>
 
-        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto " >
-          
-          <div class="mb-12 p-4 md:w-1/2 project-card">
+        <div id="filter-button" class="justify-center xl:px-36">
+            <button id="all" class="filter-button active bg-blue-500 shadow-lg shadow-blue-500/50 rounded-lg text-white py-2 px-4 font-semibold">All</button>
+            <button id="programming" class="filter-button shadow-lg shadow-blue-500/50 rounded-lg text-blue-500 py-2 px-4 font-semibold">Programming</button>
+            <button id="design" class="filter-button shadow-lg shadow-blue-500/50 rounded-lg text-blue-500 py-2 px-4 font-semibold">Design</button>
+            <button id="video" class="filter-button shadow-lg shadow-blue-500/50 rounded-lg text-blue-500 py-2 px-4 font-semibold">Video</button>
+        </div>
+
+        <div id="itemList" class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto overflow-hidden" >
+          <div data-category="programming" class="mb-12 p-4 md:w-1/2 project-card">
             <div class="rounded-md shadow-md overflow-hidden">
               <a href="thesis.html">
                 <img src="/dist/img/portfolio/final project.jpg" alt="Thesis Project" width="full">
@@ -311,18 +319,18 @@
             <p class="font-medium text-base text-secondary">Developed a web-based <span class="text-primary font-semibold"> sentiment analysis system </span> for Indonesian 2024 Presidential candidates. Developed using Python with Flask. Completed in three weeks with an excellent final grade (A)</p>
           </div>
 
-            <div class="mb-12 p-4 md:w-1/2 project-card">
+            <div data-category="programming" class="mb-12 p-4 md:w-1/2 project-card">
               <div class="rounded-md shadow-md overflow-hidden">
-                <a href="lawson.html">
-                  <img src="/dist/img/portfolio/lawson.jpg" alt="Dashboard Lawson" width="full">
+                <a href="https://bookshelfbyrafiel.netlify.app/">
+                  <img src="/dist/img/portfolio/rakbuku.jpg" alt="Bookshelf Apps" width="full">
               </div>
-              <h3 class="font-semibold text-xl text-dark mt-5 mb-0"> Lawson Dashboard</h3>
+              <h3 class="font-semibold text-xl text-dark mt-5 mb-0"> Bookshelf Apps</h3>
                 </a>
               <h6 class="keyword bg-primary rounded-full py-0 px-3 text-xs font-normal text-white mt-0 mb-3">Front-End</h6>
-              <p class="font-medium text-base text-secondary">Developed a <span class="text-primary font-semibold">Lawson Dashboard</span> with CRUD functionality, implementing a UI/UX approach for a responsive and on-brand dashboard.</p>
+              <p class="font-medium text-base text-secondary">I've crafted an intuitive <span class="text-primary font-semibold">book management app</span>, enabling users to input, categorize, and track their reading progress seamlessly. Leveraging local storage, it ensures efficient data management for a smooth user experience.</p>
             </div>
           
-            <div class="mb-12 p-4 md:w-1/2 project-card">
+            <div data-category="programming" class="mb-12 p-4 md:w-1/2 project-card">
                 <div class="rounded-md shadow-md overflow-hidden">
                   <a href="lawson.html">
                     <img src="/dist/img/portfolio/wedding.jpg" alt="Wedding Invitation" width="full">
@@ -334,7 +342,7 @@
                 <p class="font-medium text-base text-secondary">Designed and built a responsive <span class="text-primary font-semibold">Digital Wedding Invitation</span> that includes wedding details, RSVP form, and messaging features for both the wedding couple.</p>
             </div>
           
-              <div class="mb-12 p-4 md:w-1/2 project-card">
+              <div data-category="design" class="mb-12 p-4 md:w-1/2 project-card">
                 <a href="/cafe.html">
                 <div class="rounded-md shadow-md overflow-hidden">
                   <img src="/dist/img/portfolio/cafe.jpg" alt="Cafe Promotion Design" width="full">
@@ -347,7 +355,7 @@
               </div>
           
           
-              <div class="mb-12 p-4 md:w-1/2 project-card">
+              <div data-category="design" class="mb-12 p-4 md:w-1/2 project-card">
                 <a href="/chakrapalma.html">
                 <div class="rounded-md shadow-md overflow-hidden">
                   <img src="/dist/img/portfolio/Chakra Palma.jpg" alt="Corporate Branding Design" width="full">
@@ -360,7 +368,7 @@
               </div>
           
           
-              <div class="mb-12 p-4 md:w-1/2 project-card">
+              <div data-category="design" class="mb-12 p-4 md:w-1/2 project-card">
                 <a href="/pmk.html">
                 <div class="rounded-md shadow-md overflow-hidden">
                   <img src="/dist/img/portfolio/kemenkopmk.jpg" alt="Ministry book cover design" width="full">
@@ -372,7 +380,7 @@
                 <p class="font-medium text-base text-secondary">Crafted <span class="text-primary font-semibold">book cover design</span> for a ministry institution in Indonesia during an internship program. Infused the values and ethos of the institution into the visual product.</p>
               </div>
 
-              <div class="mb-12 p-4 md:w-1/2 project-card">
+              <div data-category="design" class="mb-12 p-4 md:w-1/2 project-card">
                 <a href="/diorna.html">
                 <div class="rounded-md shadow-md overflow-hidden">
                   <img src="/dist/img/portfolio/diorna.jpg" alt="Cosmetics Store Branding" width="full">
@@ -384,7 +392,7 @@
                 <p class="font-medium text-base text-secondary">Created branding design for a <span class="text-primary font-semibold">Cosmetics Store</span>, including logo design, stand banner design, and other promotional materials.</p>
               </div>
           
-              <div class="mb-12 p-4 md:w-1/2 project-card">
+              <div data-category="design" class="mb-12 p-4 md:w-1/2 project-card">
                 <a href="/lp3h.html">
                 <div class="rounded-md shadow-md overflow-hidden">
                   <img src="/dist/img/portfolio/lp3h.jpg" alt="Institution Branding" width="full">
@@ -396,7 +404,7 @@
                 <p class="font-medium text-base text-secondary">Creating concepts and designing <span class="text-primary font-semibold">social media content</span>, including posts for special occasions and events.</p>
               </div>
           
-            <div class="mb-12 p-4 md:w-1/2 project-card">
+            <div data-category="video" class="mb-12 p-4 md:w-1/2 project-card">
               <a href="digmar.html">
               <div class="rounded-md shadow-md overflow-hidden">
                 <img src="/dist/img/portfolio/digmar_agil.jpg" alt="Digital Marketing Video Illustration" width="full">
@@ -409,7 +417,7 @@
             </div>
         
         
-          <div class="mb-12 p-4 md:w-1/2 project-card">
+          <div data-category="video" class="mb-12 p-4 md:w-1/2 project-card">
             <a href="anemia.html">
             <div class="rounded-md shadow-md overflow-hidden">
               <img src="/dist/img/portfolio/yasmin_anemia.jpg" alt="Anemia Video Illustration" width="full">
@@ -422,7 +430,7 @@
           </div>
         
         
-          <div class="mb-12 p-4 md:w-1/2 project-card">
+          <div data-category="video" class="mb-12 p-4 md:w-1/2 project-card">
             <a href="/yganemia.html">
             <div class="rounded-md shadow-md overflow-hidden">
               <img src="/dist/img/portfolio/remaja_anemia.jpg" alt="Anemia Educational Video for Young Girls." width="full">
@@ -562,22 +570,10 @@
               <textarea name="message" type="message" id="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary h-28" required></textarea>
             </div>
             <div class="w-full px-4">
-              <button type="submit" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Submit</button>
+              <button type="submit" class="text-base font-semibold text-white bg-primary shadow-md shadow-blue-500/50 py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500">Submit</button>
             </div>
           </div>
         </form>
-
-
-        <div id="popup" class="popup hidden">
-          <div class="popup-content">
-            <div class="checklist-icon">
-              <img src="/dist/img/icon/checklist.png" alt="Checklist Icon" class="checklist-img">
-            </div>
-            <h4 class="popup-title">Your message has been sent successfully.</h4>
-            <p class="popup-text">Thank you for contacting us. We will respond to your message within 24 hours.</p>
-          </div>
-        </div>
-      </div>
 
     </section>
     <!--End Contact-->
@@ -668,10 +664,10 @@
     <!--End Footer-->
     <script src="/dist/js/script.js"></script>
     <script src="/dist/js/testimonial-slider.js"></script>
-    <script src="/dist/js/language.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/dist/js/smoothscroll.js"></script>
-    
+    <script src="dist/js/portfolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   </body>
 </html>

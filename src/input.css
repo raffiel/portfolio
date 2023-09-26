@@ -35,6 +35,10 @@ body {
   display: block;
 }
 
+.filterDiv {
+  display: none;
+}
+
 .project-card {
   perspective: 1000px;
   transition: transform 0.3s ease;
@@ -42,10 +46,6 @@ body {
 
 .project-card:hover img {
   transform: scale(1.1);
-}
-
-.project-card:hover {
-  background-color: rgba(0, 0, 0, 0.2); /* Ubah nilai alpha (0.2) sesuai kebutuhan */
 }
 
 .testimonial-card {
@@ -78,6 +78,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  #filter-button {
+    padding-left: 10em;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
@@ -100,65 +104,6 @@ body {
 
 .keyword {
   display: inline-block;
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff; /* Ubah warna menjadi putih */
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  opacity: 0;
-  z-index: 50;
-}
-
-.checklist-icon {
-  margin: 1rem auto;
-  width: 114px;
-  height: 114px;
-  /* Tambahkan transform dan animasi */
-  transform-style: preserve-3d;
-  animation: rotateCoin 2s ease-in-out;
-}
-
-@keyframes rotateCoin {
-  0% {
-    transform: rotateY(0);
-  }
-  100% {
-    transform: rotateY(1turn);
-  }
-}
-
-.popup-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #0f172a; /* Ubah warna menjadi hitam */
-  margin-bottom: 0.5rem;
-}
-
-.popup-text {
-  font-size: 1rem;
-  color: #64748b; /* Ubah warna menjadi hitam */
-}
-
-/* Tambahkan transisi opacity */
-.transition-opacity {
-  transition-property: opacity;
-}
-
-/* Tambahkan durasi transisi */
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-/* Tambahkan efek muncul */
-.popup:not(.hidden) {
-  opacity: 1;
 }
 
 .input-container {
@@ -261,26 +206,6 @@ header {
   object-fit: cover;
 }
 
-.btn-primary {
-  background-color: #007bff; /* Your primary button color */
-}
-
-.btn-primary:hover {
-  background-color: #0056b3; /* Your primary button hover color */
-}
-
-.btn-secondary {
-  background-color: #6c757d; /* Your secondary button color */
-}
-
-.btn-secondary:hover {
-  background-color: #545b62; /* Your secondary button hover color */
-}
-
-.btn-tertiary {
-  background-color: #17a2b8; /* Your tertiary button color */
-}
-
-.btn-tertiary:hover {
-  background-color: #117a8b; /* Your tertiary button hover color */
+.hidden {
+  display: none;
 }

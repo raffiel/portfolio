@@ -18,27 +18,19 @@ hamburger.addEventListener("click", function () {
 });
 
 const form = document.getElementById("myForm");
-const popup = document.getElementById("popup");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  // Tampilkan pop-up
-  showPopup();
+  // Simpan nama dari input "name"
+  const name = document.getElementById("name").value.trim();
+
+  // Tampilkan SweetAlert success
+  Swal.fire(`Message Sent!`, `Thanks <strong>${name}</strong>. Your message has been successfully sent and I will respond shortly.`, "success");
+
+  // Setelah SweetAlert ditampilkan, reset formulir
+  form.reset();
 });
-
-function showPopup() {
-  popup.classList.remove("hidden");
-  popup.classList.add("transition-opacity", "duration-300"); // Tambahkan class transisi
-
-  // Tambahkan penundaan untuk menyembunyikan pop-up setelah 4 detik
-  setTimeout(hidePopup, 3300);
-}
-
-function hidePopup() {
-  popup.classList.remove("transition-opacity", "duration-300"); // Hapus class transisi
-  popup.classList.add("hidden");
-}
 
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
@@ -67,6 +59,11 @@ function validateEmail() {
   } else {
     emailValidation.textContent = "";
   }
+}
+
+function resetValidation() {
+  nameValidation.textContent = "";
+  emailValidation.textContent = "";
 }
 
 // Bar banner
