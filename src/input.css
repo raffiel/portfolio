@@ -79,7 +79,7 @@ body {
 
 @media (max-width: 767px) {
   #filter-button {
-    padding-left: 10em;
+    padding-left: 2em;
   }
 
   .swiper-button-next,

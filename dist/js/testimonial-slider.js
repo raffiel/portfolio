@@ -18,6 +18,10 @@ const testimonialCarousel = new Swiper("#testimonialCarousel", {
       slidesPerView: 2,
     },
   },
+  autoplay: {
+    delay: 3000, // Waktu delay antara pergantian slide dalam milidetik (misalnya, 3 detik)
+    disableOnInteraction: false, // Tetapkan ke false agar autoplay tetap berjalan ketika pengguna berinteraksi dengan carousel
+  },
 });
 
 // Set initial active card as centered and others with reduced opacity and size

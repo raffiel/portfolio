@@ -1068,6 +1068,11 @@ video {
   line-height: 1.625;
 }
 
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
 .text-dark {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
@@ -1101,11 +1106,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-blue-500 {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -1195,6 +1195,10 @@ body {
   display: block;
 }
 
+.filterDiv {
+  display: none;
+}
+
 .project-card {
   perspective: 1000px;
   transition: transform 0.3s ease;
@@ -1234,6 +1238,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  #filter-button {
+    padding-left: 2em;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
@@ -1256,72 +1264,6 @@ body {
 
 .keyword {
   display: inline-block;
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  /* Ubah warna menjadi putih */
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  opacity: 0;
-  z-index: 50;
-}
-
-.checklist-icon {
-  margin: 1rem auto;
-  width: 114px;
-  height: 114px;
-  /* Tambahkan transform dan animasi */
-  transform-style: preserve-3d;
-  animation: rotateCoin 2s ease-in-out;
-}
-
-@keyframes rotateCoin {
-  0% {
-    transform: rotateY(0);
-  }
-
-  100% {
-    transform: rotateY(1turn);
-  }
-}
-
-.popup-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #0f172a;
-  /* Ubah warna menjadi hitam */
-  margin-bottom: 0.5rem;
-}
-
-.popup-text {
-  font-size: 1rem;
-  color: #64748b;
-  /* Ubah warna menjadi hitam */
-}
-
-/* Tambahkan transisi opacity */
-
-.transition-opacity {
-  transition-property: opacity;
-}
-
-/* Tambahkan durasi transisi */
-
-.duration-300 {
-  transition-duration: 300ms;
-}
-
-/* Tambahkan efek muncul */
-
-.popup:not(.hidden) {
-  opacity: 1;
 }
 
 .input-container {
