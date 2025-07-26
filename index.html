@@ -11,6 +11,11 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+
   </head>
   <body class="relative">
     
@@ -85,8 +90,8 @@
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">Hi there, everyone🥂!<span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"> I'm Raffiel</span></h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Web Developer & UI Designer</h2>
-            <p class="font-medium text-secondary mb-10 leading-relaxed">Fresh graduate in Computer Science, possessing a unique fusion of coding prowess and artistic sensibility.</p>
+            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Createive & UI Designer</h2>
+            <p class="font-medium text-secondary mb-10 leading-relaxed">Graphic Designer with 3+ years of experience creating strategic visual assets for social media and marketing campaigns. Backed by an IT background, I combine design and digital tools to deliver creative, data-informed solutions that drive results.</p>
             <a href="#contact" > 
               <button class="bg-blue-500 shadow-lg shadow-blue-500/50 rounded-lg text-white py-2 px-4 font-semibold">Contact me</button>
             </a>
@@ -115,9 +120,10 @@
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2">
             <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">An enthusiastic amateur in the world of technology. </h2>
+            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Crafting Ideas into Visual Impact</h2>
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
-              I'm a Computer Science graduate passionate about the potential of technology to make a difference. With experience in the <a href="https://www.kemenkopmk.go.id/profil-kemenko-pmk" target="_blank" class="font-semibold text-primary">Ministry of Human Development and Culture</a>, I've gained valuable insights into the transformative power of technology. As a former Chairman of the <a href="https://www.instagram.com/himailkomunnes/" target="_blank" class="font-semibold text-primary">Computer Science Student Association </a> and Central Java Coordinator for <a href="https://www.instagram.com/permikomnas.ri/" target="_blank" class="font-semibold text-primary">the National Association of Informatics and Computer Students</a>, I've honed my collaboration and leadership skills. I'm committed to continuous learning in front-end development and UI/UX, aiming to create engaging user experiences through creativity and quality code.</p>
+              I’m a <span class="font-semibold text-primary">Computer Science graduate with over 3 years of experience </span> in <span class="text-primary font-semibold">digital content and visual design.</span> I blend creativity and tech to produce content that’s visually strong and strategically driven, from educational feeds to campaign visuals and <span class="text-primary font-semibold">high performing social media assets.</span>
+My background includes working with the <a href="https://www.kemenkopmk.go.id/" class="text-primary font-semibold">Ministry of Human Development and Culture, contributing to <a href="https://www.instagram.com/globalsevillapulomas/" target="_blank" class="text-primary font-semibold">a leading international school</a> with strong values in mindfulness and character building, and helping organizations grow their digital presence through <span class="text-primary font-semibold">storytelling, branding, and design.</span> I enjoy working with creative teams, solving problems visually, and turning ideas into content people connect with.</p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
             <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Let's connected</h3>
@@ -175,7 +181,7 @@
     <!-- About Section End-->
     <!--Start Skills-->
     <section id="skills" class="pt-36 pb-16 bg-slate-100">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h2 class="font-bold text-primary text-3xl mb-5 max-w-xl lg:text-4xl">My Skills</h2>
@@ -290,7 +296,7 @@
     <!--End Skills-->
     <!--Start Portofolio-->
     <section id="projects" class="pt-36 pb-16">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" data-aos-once="true">
         <div class="w-full px-4 ">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold  text-primary text-lg mb-2">Portfolio</h4>
@@ -539,7 +545,7 @@
     <!--End Testimoni-->
     <!--Start Contact-->
     <section id="contact" class="pt-36 pb-32">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold  text-primary text-lg mb-2">Contact</h4>
@@ -668,6 +674,10 @@
     <script src="/dist/js/smoothscroll.js"></script>
     <script src="dist/js/portfolio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
   </body>
 </html>
