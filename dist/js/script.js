@@ -22,17 +22,28 @@ const form = document.getElementById("myForm");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  // Simpan nama dari input "name"
+  const formData = new FormData(form);
   const name = document.getElementById("name").value.trim();
 
-  // Tampilkan SweetAlert success
-  Swal.fire(`Message Sent!`, `Thanks <strong>${name}</strong>. Your message has been successfully sent and I will respond shortly.`, "success");
-
-  // Setelah SweetAlert ditampilkan, reset formulir
-  form.reset();
-
-  resetValidation();
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      Swal.fire(
+        "Message Sent!",
+        `Thanks <strong>${name}</strong>. Your message has been successfully sent and I will respond shortly.`,
+        "success"
+      );
+      form.reset();
+      resetValidation();
+    })
+    .catch((error) =>
+      Swal.fire("Oops!", "Something went wrong. Please try again later.", "error")
+    );
 });
+
 
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
