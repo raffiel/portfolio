@@ -9,6 +9,7 @@
 <meta name="keywords" content="Rafi El Falih, Raffi El Falih, Raffiel, Designer Indonesia, UI Designer, Portfolio Designer">
 <meta name="author" content="Rafi El Falih">
     <link rel="stylesheet" href="dist/output.css" />
+   
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link
         rel="stylesheet"
@@ -31,9 +32,11 @@
       }
       </script>
 
+      
+
 
   </head>
-  <body class="relative">
+  <body class="relative" onload="startAnim()">
     
     <!--Banner Start-->
     <div class="flex items-center justify-center fixed top-0 left-0 w-full z-20 h-16 bg-primary text-white">
@@ -87,12 +90,12 @@
     <!--Header Section End-->
     
     <!--Hero Section Start-->
-    <section id="home" class="pt-36">
+    <section id="home" class=" pt-36" >
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">Hi there, everyone🥂!<span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"> I'm Raffiel</span></h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Creative & UI Designer</h2>
+            <h2 id="typewriter" class="font-medium text-secondary text-lg mb-5 lg:text-2xl h-[40px]">Creative & UI Designer</h2>
             <p class="font-medium text-secondary mb-10 leading-relaxed">Graphic Designer with 3+ years of experience creating strategic visual assets for social media and marketing campaigns. Backed by an IT background, I combine design and digital tools to deliver creative, data-informed solutions that drive results.</p>
             <a href="#contact" > 
               <button class="bg-blue-500 shadow-lg shadow-blue-500/50 rounded-lg text-white py-2 px-4 font-semibold">Contact me</button>
@@ -125,7 +128,7 @@
             <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Crafting Ideas into Visual Impact</h2>
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
               I’m a <span class="font-semibold text-primary">Computer Science graduate with over 3 years of experience </span> in <span class="text-primary font-semibold">digital content and visual design.</span> I blend creativity and tech to produce content that’s visually strong and strategically driven, from educational feeds to campaign visuals and <span class="text-primary font-semibold">high performing social media assets.</span>
-My background includes working with the <a href="https://www.kemenkopmk.go.id/" class="text-primary font-semibold">Ministry of Human Development and Culture, contributing to <a href="https://www.instagram.com/globalsevillapulomas/" target="_blank" class="text-primary font-semibold">a leading international school</a> with strong values in mindfulness and character building, and helping organizations grow their digital presence through <span class="text-primary font-semibold">storytelling, branding, and design.</span> I enjoy working with creative teams, solving problems visually, and turning ideas into content people connect with.</p>
+My background includes working with the <a href="https://www.kemenkopmk.go.id/" class="text-primary font-semibold">Ministry of Human Development and Culture</a>, contributing to <a href="https://www.instagram.com/globalsevillapulomas/" target="_blank" class="text-primary font-semibold">a leading international school</a> with strong values in mindfulness and character building, and helping organizations grow their digital presence through <span class="text-primary font-semibold">storytelling, branding, and design.</span> I enjoy working with creative teams, solving problems visually, and turning ideas into content people connect with.</p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
             <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Let's connected</h3>
@@ -687,6 +690,58 @@ My background includes working with the <a href="https://www.kemenkopmk.go.id/" 
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      const phrases = [
+        "Creative & UI Designer",
+        "Visual Storyteller",
+        "Frontend Developer (with a touch of art)"
+      ];
+    
+      let i = 0;
+      let j = 0;
+      let currentPhrase = [];
+      let isDeleting = false;
+      let isEnd = false;
+    
+      function loop() {
+        const typewriter = document.getElementById('typewriter');
+    
+        isEnd = false;
+        typewriter.innerHTML = currentPhrase.join('');
+    
+        if (i < phrases.length) {
+          if (!isDeleting && j <= phrases[i].length) {
+            currentPhrase.push(phrases[i][j]);
+            j++;
+            typewriter.innerHTML = currentPhrase.join('');
+          }
+    
+          if (isDeleting && j <= phrases[i].length) {
+            currentPhrase.pop();
+            j--;
+            typewriter.innerHTML = currentPhrase.join('');
+          }
+    
+          if (j == phrases[i].length) {
+            isEnd = true;
+            isDeleting = true;
+          }
+    
+          if (isDeleting && j === 0) {
+            currentPhrase = [];
+            isDeleting = false;
+            i++;
+            if (i === phrases.length) {
+              i = 0;
+            }
+          }
+        }
+        const typingSpeed = isEnd ? 1500 : isDeleting ? 30 : 60;
+        setTimeout(loop, typingSpeed);
+      }
+    
+      document.addEventListener("DOMContentLoaded", loop);
     </script>
     
   </body>
